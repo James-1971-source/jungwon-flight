@@ -1,0 +1,193 @@
+/* 기본 스타일 */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body { 
+  font-family: 'Segoe UI', sans-serif; 
+  line-height: 1.6; 
+  color: var(--text); 
+  background: var(--bg); 
+}
+
+/* 헤더 스타일 */
+header { 
+  background: var(--primary); 
+  color: white; 
+  padding: 1rem; 
+  text-align: center; 
+}
+
+/* 네비게이션 스타일 */
+nav { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 240px; 
+  height: 100%; 
+  background: var(--nav-bg); 
+  padding: 1rem; 
+  overflow-y: auto; 
+}
+
+nav a { 
+  display: block; 
+  color: var(--nav-text); 
+  margin: 0.5rem 0; 
+  text-decoration: none; 
+}
+
+nav a:hover { 
+  text-decoration: underline; 
+}
+
+/* 메인 콘텐츠 스타일 */
+main { 
+  margin-left: 260px; 
+  padding: 2rem; 
+}
+
+/* 타이포그래피 */
+h1, h2, h3, h4 { 
+  color: var(--heading); 
+  margin: 1rem 0 0.5rem; 
+}
+
+/* 리스트 스타일 */
+ul, ol { 
+  margin: 0.5rem 0 1rem 1.5rem; 
+}
+
+/* 테이블 스타일 */
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin: 1rem 0; 
+}
+
+th, td { 
+  border: 1px solid #ccc; 
+  padding: 0.5rem; 
+  text-align: left; 
+}
+
+th { 
+  background: var(--secondary); 
+  color: white; 
+}
+
+/* 섹션 스타일 */
+section { 
+  margin-bottom: 2rem; 
+}
+
+/* SVG 다이어그램 스타일 */
+.diagram-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.diagram-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.system-diagram {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  margin: 0 auto;
+}
+
+.system-box {
+  fill: #fff;
+  stroke: #2196F3;
+  stroke-width: 1.5;
+  rx: 6;
+  transition: all 0.3s ease;
+}
+
+.system-box:hover {
+  fill: #E3F2FD;
+  stroke: #1976D2;
+}
+
+.system-text {
+  fill: #333;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.connection-line {
+  stroke: #2196F3;
+  stroke-width: 1;
+  stroke-dasharray: 3,3;
+  animation: dash 15s linear infinite;
+}
+
+.arrow-head {
+  fill: none;
+  stroke: #2196F3;
+  stroke-width: 1;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+/* 다이어그램 제목 스타일 */
+h4 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+  .diagram-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  .system-text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .diagram-container {
+    padding: 0.75rem;
+  }
+  .system-text {
+    font-size: 10px;
+  }
+  .system-box {
+    stroke-width: 1;
+  }
+  .connection-line {
+    stroke-width: 0.75;
+  }
+}
+
+/* 푸터 스타일 */
+footer { 
+  text-align: center; 
+  padding: 1rem; 
+  font-size: 0.9rem; 
+  color: #666; 
+} 
